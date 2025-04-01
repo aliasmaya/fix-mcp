@@ -156,7 +156,7 @@ def send_fix_sequence_reset(new_seq_no: int, gap_fill: bool = False) -> Dict[str
         "message": "Sequence reset sent successfully" if success else "Sequence reset failed"
     }
 
-@mcp.resource("fix/status")
+@mcp.tool()
 def get_fix_status() -> Dict[str, Any]:
     """Get the current connection status of the FIX client.
     
