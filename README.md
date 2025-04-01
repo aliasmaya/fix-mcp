@@ -91,4 +91,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Based on FIX Protocol 4.2 specifications (https://www.fixtrading.org/standards/fix-4-2/).
 
 Happy trading and coding!
-```
