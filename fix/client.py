@@ -50,7 +50,8 @@ class FIXClient:
     def send_fix_message(self, msg_type: str, fields: Dict[int, str] = None) -> str:
         if not self.is_connected:
             if not self.connect():
-                return "Connection failed"
+                logger.info("Connection failed")
+                return None
 
         msg = self._build_fix_message(msg_type, fields)
         try:
@@ -66,7 +67,7 @@ class FIXClient:
         except Exception as e:
             logger.error(f"Error sending FIX message: {e}")
             self.is_connected = False
-            return f"Send failed: {e}"
+            return None
 
     def _build_fix_message(self, msg_type: str, fields: Dict[int, str] = None) -> str:
         fix_msg = FIXMessage(self.msg_seq_num, self.sender_comp_id, self.target_comp_id, msg_type)
