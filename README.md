@@ -71,10 +71,6 @@ SENDER_COMP_ID=Sender
 TARGET_COMP_ID=Target
 ```
 
-## Project Structure
-
-- `main.py`: Main Python file containing the FIXClient, FIXMessage, and MCP server implementation.
-
 ## Contributing
 
 We welcome contributions! To contribute:
